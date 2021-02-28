@@ -1,22 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 581, in script
-    stm "Да уж! Были ведь времена, да, Димас?"
-Exception: Sayer 'stm' is not defined.
+  File "game/script.rpy", line 351, in script
+    play sound sound_club
+  File "renpy/common/000statements.rpy", line 290, in execute_play_sound
+    renpy.sound.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/script.rpy", line 351, in <module>
+    play sound sound_club
+NameError: name 'sound_club' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 581, in script
-    stm "Да уж! Были ведь времена, да, Димас?"
-  File "renpy/ast.py", line 680, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "renpy/ast.py", line 574, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'stm' is not defined.
+  File "game/script.rpy", line 351, in script
+    play sound sound_club
+  File "renpy/ast.py", line 1969, in execute
+    self.call("execute")
+  File "renpy/ast.py", line 1957, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 290, in execute_play_sound
+    renpy.sound.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "renpy/python.py", line 2249, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "renpy/python.py", line 2242, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 351, in <module>
+    play sound sound_club
+NameError: name 'sound_club' is not defined
 
 Windows-10-10.0.17763
 Ren'Py 7.4.2.1292
 Operation Skipping School 1.0
-Sun Feb 28 20:39:35 2021
+Sun Feb 28 21:56:01 2021
