@@ -155,45 +155,23 @@ label utro:
 
 label choise:
     scene bg dvor
-    if (var1==False and var2==False and var3==False):
-        menu:
-            "Куда пойдем?"
+    menu:
+        "Что делаем дальше?"
 
-            "Прогуляемся по дворам":
-                $var1 = True
-                jump garage
+        "Прогуляемся по дворам" if (var1 == False):
+            $var1 = True
+            jump garage
 
-            "Пойдем на компы":
-                $var2 = True
-                jump kompiki
+        "Пойдем на компы" if (var2 == False):           
+            $var2 = True
+            jump kompiki    
 
-            "Пошли ко мне":
-                $var3 = True
-                jump hata
-    if (var1==True and var2==False and var3==False):
-        menu:
-            "Куда пойдем?"
+        "Пошли ко мне" if (var3 == False):
+            $var3 = True
+            jump hata
 
-            "Пойдем на компы":
-                $var2 = True
-                jump kompiki
-
-            "Пошли ко мне":
-                $var3 = True
-                jump hata
-    if (var1==True and var2==True and var3==False):
-        menu:
-            "Куда пойдем?"
-
-            "Пошли ко мне":
-                $var3 = True
-                jump hata
-    if (var1==True and var2==True and var3==True):
-        menu:
-            "Куда пойдем?"
-
-            "Ладно, давай уже расходиться":
-                jump final
+        "Ладно, давай уже расходиться" if(var1 and var2 and var3):
+              jump final
 
     return
 
@@ -555,6 +533,8 @@ label final:
 
     "Он с интересом слушал наш рассказ посмеиваясь вместе с нами."
 
+    show stas norm
+
     "Дойдя до рокового переулка, мы думали расходиться."
 
     v "Я конечно понимаю чего вы так расстроены… {w}Ну, человеку свойственно ошибаться, что тут сказать…"
@@ -562,6 +542,9 @@ label final:
     "По крайней мере, вы целы, здоровы, ещё и прогулялись просто так."
 
     "Вы только это, не повторяйте эту клоунаду больше."
+
+    show stas smushenie
+
 
     menu:
         ""
@@ -572,7 +555,7 @@ label final:
         "Сегодня был самый ужасный день в моей жизни, лучше уж пойти на контрольную":
             $fin=False
 
-    s norm "Ну его нахер. Уж проще подготовиться к контрольной и спокойно отсидеть эти уроки."
+    s angry "Ну его нахер. Уж проще подготовиться к контрольной и спокойно отсидеть эти уроки."
 
     v "Это правильно. Тем более там будут сокращённые дни, может не так строго будут проверять контрольную…"
 

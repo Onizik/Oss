@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 411: Tab characters are not allowed in Ren'Py scripts.
+File "game/script.rpy", line 165: expected menuitem
+    if(!var2):
+    ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Sun Feb 28 19:45:45 2021
+Sun Feb 28 20:32:41 2021

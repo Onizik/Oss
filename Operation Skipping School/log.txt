@@ -1,4 +1,4 @@
-Sun Feb 28 19:50:17 2021
+Sun Feb 28 20:36:27 2021
 Windows-10-10.0.17763
 Ren'Py 7.4.2.1292
  
@@ -26,14 +26,14 @@ Cleaning stores took 0.00s
 Init translation took 0.05s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.02s
+Analyze screens took 0.01s
 Save screen analysis took 0.08s
 Prepare screens took 0.07s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.14s
+Interface start took 0.16s
 
 Initializing gl renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -364,11 +364,4 @@ Texture testing:
 Screen sizes: virtual=(1280, 720) physical=(1280, 720) drawable=(1280, 720)
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 1.69044518471s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.01s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
+Total time until interface ready: 1.66045498848s
